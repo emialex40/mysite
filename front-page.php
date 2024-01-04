@@ -15,12 +15,12 @@ get_header();
                         </div>
 					<?php endif; ?>
 
-                    <h1><?php pll_e( 'Alexander Yemeliantsev' ); ?></h1>
-                    <p><?php pll_e( 'WordPress Developer and Problem Solver' ); ?></p>
+                    <h1><?php _e( 'Alexander Yemeliantsev', 'themename' ); ?></h1>
+                    <p><?php _e( 'WordPress Developer and Problem Solver', 'themename' ); ?></p>
                 </div>
 				<?php if ( get_field( 'add_cv', 'option' ) ) : ?>
                     <div class="front-btn">
-                        <a href="<?php the_field( 'add_cv', 'option' ); ?>" class="btn" download="CV"><?php pll_e( 'Download CV' ); ?></a>
+                        <a href="<?php the_field( 'add_cv', 'option' ); ?>" class="btn" download="CV"><?php _e( 'Download CV', 'themename' ); ?></a>
                     </div>
 				<?php endif; ?>
             </div>

@@ -23,10 +23,10 @@ $query = new WP_Query( $args );
             </div>
             <div class="portfolio-header-btns">
                 <div>
-                    <a class="btn" href="<?php the_field( 'about_page' ) ?>"><?php pll_e( 'About' ); ?></a>
+                    <a class="btn" href="<?php the_field( 'about_page' ) ?>"><?php _e( 'About', 'themename' ); ?></a>
                 </div>
                 <div>
-                    <a class="btn" href="<?php the_field( 'contact_page' ) ?>"><?php pll_e( 'Contact' ); ?></a>
+                    <a class="btn" href="<?php the_field( 'contact_page' ) ?>"><?php _e( 'Contact', 'themename' ); ?></a>
                 </div>
             </div>
         </header>
@@ -45,7 +45,7 @@ $query = new WP_Query( $args );
                             </div>
                             <div class="portfolio-grid-data">
                                 <h2><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
-                                <a rel="nofollow" href="<?php the_field( 'site_link' ); ?>" target="_blank"><?php pll_e( 'View site' ); ?></a>
+                                <a rel="nofollow" href="<?php the_field( 'site_link' ); ?>" target="_blank"><?php _e( 'View site', 'themename' ); ?></a>
                             </div>
                         </div>
                     </div>

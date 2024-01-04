@@ -8,6 +8,9 @@ body {
   padding: 0;
   height: 100%;
   min-height: 100%;
+  @include _respond-to(600) {
+    font-size: 16px;
+  }
   &.page-template-contact-php {
     background: $black;
   }
@@ -321,12 +324,19 @@ img::selection,
 
 main {
   margin-left: 6%;
+  @include _respond-to(991) {
+    margin-left: 0;
+  }
 }
 
 .page-area {
   padding: 5%;
   box-sizing: border-box;
   min-height: 100vh;
+  @include _respond-to(991) {
+    padding: 15px;
+    margin-top: 100px;
+  }
   &-front {
     display: flex;
     justify-content: center;
@@ -342,6 +352,10 @@ main {
     text-align: right;
     position: relative;
     transition: .5s ease-in-out;
+    @include _respond-to(767) {
+      text-align: center;
+      font-size: 50px;
+    }
     &:after {
       content: '';
       width: 0;
@@ -376,6 +390,9 @@ main {
   box-sizing: border-box;
   box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, .3);
   text-align: center;
+  @include _respond-to(480) {
+    font-size: 16px;
+  }
   &:hover {
     padding: 8px 34px;
   }
@@ -384,6 +401,12 @@ main {
 .title {
   font-family: $title;
   font-size: 9vw;
+  @include _respond-to(600) {
+    font-size: 55px;
+  }
+  @include _respond-to(480) {
+    font-size: 37px;
+  }
 }
 
 .button-wrap {
@@ -396,16 +419,68 @@ main {
   top: 50%;
   right: -33px;
   transform: translateY(-50%) rotate(-90deg);
-  background: transparent;
+  background: rgba(214, 231, 218, .7);
   padding: 5px 24px;
   font-size: 16px;
   color: $black;
   border: 1px solid $black;
+  z-index: 100;
+  @include _respond-to(991) {
+    right: auto;
+    left: -33px;
+  }
 }
 
 .page-template-contact-php {
   .to-home {
     color: $white;
     border: 1px solid $white;
+    background: rgba(26, 26, 26, .7);
+  }
+}
+
+.wpml-ls-legacy-list-horizontal > ul {
+  display: inline-block;
+}
+
+.wpml-ls-legacy-list-horizontal .wpml-ls-item {
+  display: inline-block;
+  transform: rotate(-90deg);
+  margin: 5px 0;
+  font-family: $text;
+  font-size: 16px;
+  font-weight: 300;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.wpml-ls-legacy-list-horizontal a {
+  color: $black;
+  position: relative;
+  &:after {
+    content: '';
+    width: 0;
+    height: 1px;
+    background: $black;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: .3s ease-in-out;
+  }
+  &:hover {
+    &:after {
+      width: 70%;
+    }
+  }
+}
+
+.wpml-ls-legacy-list-horizontal .wpml-ls-current-language a {
+  &:after {
+    width: 70%;
   }
 }

@@ -19,8 +19,8 @@ get_header();
 
         <div class="contacts-page-content">
             <div class="contacts-page-links">
-                <a href="<?php the_field('ct_about_page'); ?>"><?php pll_e( 'About' ); ?></a>
-                <a href="<?php the_field('ct_portfolio_page'); ?>"><?php pll_e( 'Portfolio' ); ?></a>
+                <a href="<?php the_field('ct_about_page'); ?>"><?php _e( 'About', 'themename' ); ?></a>
+                <a href="<?php the_field('ct_portfolio_page'); ?>"><?php _e( 'Portfolio', 'themename' ); ?></a>
             </div>
             <p class="contacts-page-hello"><?php the_field('hello_text'); ?></p>
 

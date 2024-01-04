@@ -9,7 +9,7 @@
 </footer>
     <?php endif; ?>
 
-<a href="<?php echo get_home_url(); ?>" class="to-home"><?php pll_e( 'Home' ); ?></a>
+<a href="<?php echo get_home_url(); ?>" class="to-home"><?php _e( 'Home', 'themename' ); ?></a>
 <?php endif; ?>
 
 </main>

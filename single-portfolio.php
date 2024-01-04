@@ -23,7 +23,7 @@ $portfolio_id = $portfolio[0]->ID;
 
     <section class="page-area single-portfolio">
         <div class="single-portfolio-header">
-            <a href="<?php the_permalink($portfolio_id); ?>"><?php pll_e( 'Go to Portfolio' ); ?></a>
+            <a href="<?php the_permalink($portfolio_id); ?>"><?php _e( 'Go to Portfolio', 'themename' ); ?></a>
         </div>
 
         <article class="single-portfolio-row">
@@ -36,14 +36,14 @@ $portfolio_id = $portfolio[0]->ID;
             <div class="single-portfolio-content">
                 <div class="single-portfolio-wrap">
                     <h1><?php the_title(); ?></h1>
-                    <a rel="nofollow" class="single-portfolio-link" href="<?php the_field( 'site_link' ); ?>" target="_blank"><?php pll_e( 'View site' ); ?></a>
+                    <a rel="nofollow" class="single-portfolio-link" href="<?php the_field( 'site_link' ); ?>" target="_blank"><?php _e( 'View site', 'themename' ); ?></a>
 
                     <div class="single-portfolio-description">
 						<?php the_field( 'description' ); ?>
                     </div>
 
                     <div class="single-portfolio-button">
-                        <a class="btn" href="<?php the_permalink($contact_id); ?>"><?php pll_e( 'Contact' ); ?></a>
+                        <a class="btn" href="<?php the_permalink($contact_id); ?>"><?php _e( 'Contact', 'themename' ); ?></a>
                     </div>
                 </div>
             </div>

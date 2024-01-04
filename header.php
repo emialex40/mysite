@@ -28,13 +28,7 @@
         <div class="app_main">
             <nav id="left-nav" class="left-nav<?php echo is_front_page() ? ' front-nav' : ''; ?>">
                 <div class="left-nav-wrap">
-                    <ul class="top-nav">
-                        <?php pll_the_languages( [
-                                'show_names' => 1,
-                                'hide_if_empty' => 0,
-                                'display_names_as' => 'slug'
-                        ] ); ?>
-                    </ul>
+	                <?php do_action('wpml_add_language_selector'); ?>
                     <div class="left-nav-divider"></div>
                     <div class="bottom-nav">
                         &copy; / <?php echo date( 'Y' ); ?>

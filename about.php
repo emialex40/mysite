@@ -11,7 +11,7 @@ get_header(); ?>
             <div class="about-image">
                 <div class="about-image-wrap">
                     <div class="about-image-mask"></div>
-                    <img src="<?php the_field('profile_foto'); ?>" alt="<?php pll_e( 'Olexander Yemeliantsev' ); ?>">
+                    <img src="<?php the_field('profile_foto'); ?>" alt="<?php _e( 'Olexander Yemeliantsev', 'themename' ); ?>">
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@ get_header(); ?>
                 <div class="about-grid-left about-grid-text">
                     <?php the_field('about-text1'); ?>
                     <div class="button-wrap">
-                        <a href="<?php the_field( 'add_cv', 'option' ); ?>" class="btn" download="CV"><?php pll_e( 'Download CV' ); ?></a>
+                        <a href="<?php the_field( 'add_cv', 'option' ); ?>" class="btn" download="CV"><?php _e( 'Download CV', 'themename' ); ?></a>
                     </div>
                 </div>
 
@@ -30,7 +30,7 @@ get_header(); ?>
                     <h2><?php the_field('skills_title'); ?></h2>
                     <?php the_field('about_text2'); ?>
                     <div class="button-wrap">
-                        <a href="<?php the_field( 'portfolio_button' ); ?>" class="btn"><?php pll_e( 'Portfolio' ); ?></a>
+                        <a href="<?php the_field( 'portfolio_button' ); ?>" class="btn"><?php _e( 'Portfolio', 'themename' ); ?></a>
                     </div>
                 </div>
 
@@ -38,7 +38,7 @@ get_header(); ?>
                     <h2><?php the_field('exp_title'); ?></h2>
 		            <?php the_field('about_text_3'); ?>
                     <div class="button-wrap">
-                        <a href="<?php the_field( 'contact_button' ); ?>" class="btn"><?php pll_e( 'Contact' ); ?></a>
+                        <a href="<?php the_field( 'contact_button' ); ?>" class="btn"><?php _e( 'Contact', 'themename' ); ?></a>
                     </div>
                 </div>
             </div>
