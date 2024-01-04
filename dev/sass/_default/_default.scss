@@ -11,6 +11,7 @@ body {
   &.page-template-contact-php {
     background: $black;
   }
+
 }
 
 html {
@@ -305,6 +306,17 @@ textarea {
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+}
+
+a::selection,
+p::selection,
+h1::selection,
+h2::selection,
+strong::selection,
+li::selection,
+img::selection,
+.bottom-nav::selection {
+  background: #6b9477;
 }
 
 main {

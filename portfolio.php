@@ -4,6 +4,15 @@
  */
 
 get_header();
+
+$args = [
+	'post_type'      => 'portfolio',
+	'post_status'    => 'publish',
+	'posts_per_page' => - 1,
+	'order'          => 'DESC',
+];
+
+$query = new WP_Query( $args );
 ?>
 
     <section class="page-area portfolio">
@@ -22,13 +31,28 @@ get_header();
             </div>
         </header>
 
-        <div class="portfolio-grid">
-            <div class="portfolio-grid-card">
-                <div class="portfolio-grid-item">
-
-                </div>
+		<?php if ( $query->have_posts() ) : ?>
+            <div class="portfolio-grid">
+				<?php while ( $query->have_posts() ) :
+					$query->the_post();
+					?>
+                    <div class="portfolio-grid-card">
+                        <div class="portfolio-grid-item">
+                            <div class="portfolio-grid-image">
+                                <a href="<?php the_permalink(); ?>">
+                                    <img src="<?php the_field( 'preview_image' ); ?>" alt="<?php the_title() ?>">
+                                </a>
+                            </div>
+                            <div class="portfolio-grid-data">
+                                <h2><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
+                                <a rel="nofollow" href="<?php the_field( 'site_link' ); ?>" target="_blank"><?php pll_e( 'View site' ); ?></a>
+                            </div>
+                        </div>
+                    </div>
+				<?php endwhile; ?>
             </div>
-        </div>
+		<?php endif;
+		wp_reset_postdata(); ?>
     </section>
 
 <?php get_footer() ?>

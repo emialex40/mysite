@@ -1,7 +1,7 @@
 <?php
 
 add_action('init', function() {
-	pll_register_string('themename', 'Olexander Yemeliantsev');
+	pll_register_string('themename', 'Alexander Yemeliantsev');
 	pll_register_string('themename', 'WordPress Developer and Problem Solver');
 	pll_register_string('themename', 'Download CV');
 	pll_register_string('themename', 'Portfolio');
@@ -17,4 +17,6 @@ add_action('init', function() {
 	pll_register_string('themename', 'Search Portfolio');
 	pll_register_string('themename', 'Portfolio not found');
 	pll_register_string('themename', 'Not found Portfolio in trash');
+	pll_register_string('themename', 'View site');
+	pll_register_string('themename', 'Go to Portfolio');
 });

@@ -15,7 +15,7 @@ get_header();
                         </div>
 					<?php endif; ?>
 
-                    <h1><?php pll_e( 'Olexander Yemeliantsev' ); ?></h1>
+                    <h1><?php pll_e( 'Alexander Yemeliantsev' ); ?></h1>
                     <p><?php pll_e( 'WordPress Developer and Problem Solver' ); ?></p>
                 </div>
 				<?php if ( get_field( 'add_cv', 'option' ) ) : ?>

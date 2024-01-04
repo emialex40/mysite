@@ -4,6 +4,7 @@
   border-right: 1px solid $black;
   padding: 5% 15px;
   box-sizing: border-box;
+  background: $oliva;
   z-index: 600;
   position: fixed;
   top: 0;
@@ -70,6 +71,7 @@
 .page-template-contact-php {
   .left-nav {
     border-right: 1px solid $white;
+    background: $black;
     &-divider {
       background: $white;
     }

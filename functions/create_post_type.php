@@ -27,8 +27,7 @@ function register_post_type_callback () {
 		'with_front'          => true,
 		'menu_position'       => 21,
 		'rewrite'             => [
-			'slug'         => 'products',
-			'with_front'   => false,
+			'slug'         => 'cases',
 			'hierarchical' => true,
 		],
 		'supports'            => [ 'title' ],
