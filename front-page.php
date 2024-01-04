@@ -1,9 +1,47 @@
 <?php
-    get_header();
+
+get_header();
 
 ?>
 
-<h1>Hello</h1>
+<section class="page-area page-area-front">
+    <div class="front">
+        <div class="front-left">
+            <div class="front-left-wrap">
+                <div class="front-text">
+					<?php if ( get_field( 'logo', 'option' ) ) : ?>
+                        <div class="front-text-logo">
+                            <img src="<?php the_field( 'logo', 'option' ); ?>" alt="<?php echo bloginfo( 'name' ); ?>">
+                        </div>
+					<?php endif; ?>
+
+                    <h1><?php pll_e( 'Olexander Yemeliantsev' ); ?></h1>
+                    <p><?php pll_e( 'WordPress Developer and Problem Solver' ); ?></p>
+                </div>
+				<?php if ( get_field( 'add_cv', 'option' ) ) : ?>
+                    <div class="front-btn">
+                        <a href="<?php the_field( 'add_cv', 'option' ); ?>" class="btn" download="CV"><?php pll_e( 'Download CV' ); ?></a>
+                    </div>
+				<?php endif; ?>
+            </div>
+        </div>
+        <div class="front-right">
+			<?php
+			if ( has_nav_menu( 'front_menu' ) ) {
+				wp_nav_menu( [
+					'theme_location'  => 'front_menu',
+					'menu_class'      => 'menu',
+					'container'       => '',
+					'container_class' => '',
+					'menu_id'         => 'menu',
+					'depth'           => 0,
+					'walker'          => new Main_Submenu_Class(),
+				] );
+			}
+			?>
+        </div>
+    </div>
+</section>
 
 
 <?php get_footer(); ?>  

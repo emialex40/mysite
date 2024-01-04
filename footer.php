@@ -1,13 +1,21 @@
+<?php if (!is_front_page()) : ?>
+<?php if (!is_page_template('contact.php')) : ?>
+<footer class="footer">
+	<?php if ( get_field( 'logo', 'option' ) ) : ?>
+        <div class="footer-logo">
+            <img src="<?php the_field( 'logo', 'option' ); ?>" alt="<?php echo bloginfo( 'name' ); ?>">
+        </div>
+	<?php endif; ?>
+</footer>
+    <?php endif; ?>
 
+<a href="<?php echo get_home_url(); ?>" class="to-home"><?php pll_e( 'Home' ); ?></a>
+<?php endif; ?>
 
 </main>
 </div>
 </div>
 </div>
-
-<footer id="footer" class="footer bg_dark">
-<h2>Its footer</h2>
-</footer>
 
 <?php wp_footer(); ?>
 </body>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap');
+
 @import "_mixins/settings";
 @import "_mixins/mixins";
 
@@ -9,6 +11,9 @@
 @import "_default/header";
 
 /* pages */
-
+@import "_includes/front-page";
+@import "_includes/about";
+@import "_includes/portfolio";
+@import "_includes/contact";
 
 @import "_default/footer";

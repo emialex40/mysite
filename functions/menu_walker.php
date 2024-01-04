@@ -84,7 +84,6 @@ class  Main_Submenu_Class extends Walker_Nav_Menu
 function menulang_setup()
 {
 	load_theme_textdomain('themename', get_template_directory() . '/languages');
-	register_nav_menus(array('header_menu' => __('Header Menu', 'themename')));
-	register_nav_menus(array('footer_menu' => __('Footer Menu', 'themename')));
+	register_nav_menus(array('front_menu' => __('Frontpage menu', 'themename')));
 }
 add_action('after_setup_theme', 'menulang_setup');
