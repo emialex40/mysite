@@ -347,7 +347,7 @@ main {
 .menu {
   font-family: $title;
   li {
-    font-size: 7vw;
+    font-size: 6vw;
     line-height: 1.2;
     text-align: right;
     position: relative;
@@ -400,7 +400,7 @@ main {
 
 .title {
   font-family: $title;
-  font-size: 9vw;
+  font-size: 6vw;
   @include _respond-to(600) {
     font-size: 55px;
   }
@@ -482,5 +482,14 @@ main {
 .wpml-ls-legacy-list-horizontal .wpml-ls-current-language a {
   &:after {
     width: 70%;
+  }
+}
+
+.page-template-contact-php {
+  .wpml-ls-legacy-list-horizontal a {
+    color: $white;
+    &:after {
+      background: $white;
+    }
   }
 }

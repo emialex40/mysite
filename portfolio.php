@@ -9,7 +9,8 @@ $args = [
 	'post_type'      => 'portfolio',
 	'post_status'    => 'publish',
 	'posts_per_page' => - 1,
-	'order'          => 'DESC',
+	'order'          => 'ASC',
+	'orderby'        => 'menu_order',
 ];
 
 $query = new WP_Query( $args );
